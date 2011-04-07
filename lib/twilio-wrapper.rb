@@ -10,8 +10,6 @@ class TwilioWrapper
     
     @account = Twilio::RestAccount.new(@account_sid, @account_token)
   end
-
-  # version of the Twilio REST API to use - do not change
   
   def sms(recipient_number, message)
     payload = {

@@ -1,6 +1,19 @@
 = twilio-wrapper
 
-Description goes here.
+This gem was started to make interfacing with the Twilio API a little bit cleaner from Ruby.  My primary interest is in SMS, if you want to add phone support feel free to fork the project.
+
+== Usage
+
+From irb:
+
+require 'rubygems'
+require 'twiliolib'
+require 'lib/twilio-wrapper'
+
+twilio = TwilioWrapper.new('ACCOUNT_SID', 'ACCOUNT_TOKEN', 'YOUR PHONE NUMBER')
+unless(twilio.sms('555-555-5555', 'Hey, check this out'))
+	puts "Failed to send sms"
+end
 
 == Contributing to twilio-wrapper
  
