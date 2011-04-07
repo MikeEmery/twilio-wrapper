@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "twilio-wrapper"
   gem.homepage = "http://github.com/MikeEmery/twilio-wrapper"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Thin wrapper around the twiliolib gem to provide a simpler interface}
+  gem.description = %Q{Aims to provide a cleaner interface for developers to interact with the Twilio API.}
   gem.email = "mike@sparqcode.com"
   gem.authors = ["Mike Emery"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
