@@ -1,6 +1,8 @@
+require 'twiliolib'
+
 class TwilioWrapper
   API_VERSION = '2010-04-01'
-  attr_reader :account_sid, :account_token, :caller_id, :caller_pin
+  attr_reader :account_sid, :account_token, :caller_id, :caller_pin, :twilio_response
   
   def initialize(account_sid, account_token, caller_id, caller_pin = nil)
     @account_sid = account_sid
@@ -20,12 +22,9 @@ class TwilioWrapper
     
     resp = @account.request("/#{API_VERSION}/Accounts/#{@account_sid}/SMS/Messages", 'POST', payload)
     
-    send_success = true
+    send_success = resp.is_a?(Net::HTTPSuccess)
     
-    unless resp.is_a?(Net::HTTPSuccess)
-      send_success = false
-      puts resp.body
-    end
+    @twilio_response = resp
     
     return send_success
   end
