@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{twilio-wrapper}
-  s.version = "0.0.3"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mike Emery"]
-  s.date = %q{2011-04-22}
+  s.date = %q{2011-08-07}
   s.description = %q{Aims to provide a cleaner interface for developers to interact with the Twilio API.}
   s.email = %q{mike@sparqcode.com}
   s.extra_rdoc_files = [
@@ -30,12 +30,13 @@ Gem::Specification.new do |s|
     "lib/twilio-wrapper.rb",
     "spec/VERSION",
     "spec/spec_helper.rb",
-    "spec/twilio-wrapper_spec.rb"
+    "spec/twilio-wrapper_spec.rb",
+    "twilio-wrapper.gemspec"
   ]
   s.homepage = %q{http://github.com/MikeEmery/twilio-wrapper}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.2}
+  s.rubygems_version = %q{1.6.2}
   s.summary = %q{Thin wrapper around the twiliolib gem to provide a simpler interface}
   s.test_files = [
     "spec/spec_helper.rb",
